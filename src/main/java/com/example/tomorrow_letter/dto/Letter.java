@@ -1,6 +1,6 @@
 package com.example.tomorrow_letter.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,18 +22,21 @@ public class Letter {
 
     private String letter;
 
-    private String ReceivePhone;
+    private String receivePhone;
 
     private LocalDateTime createdAt;
 
     private LocalDateTime sendAt;
 
     @Enumerated(EnumType.STRING)
-    private LetterStatus status;  //발송예쩡, 발송완료
+    private LetterStatus status;  //발송예정, 발송완료
+
+    @Enumerated(EnumType.STRING)
+    private LetterisSent letterisSent;  //받은 편지인지 보낸 편지인지
 
     @ManyToOne
     @JoinColumn(name = "user_id") // 외래 키
-    @JsonIgnore
+    @JsonIgnoreProperties("letterStore")
     private User user;
 
 }
