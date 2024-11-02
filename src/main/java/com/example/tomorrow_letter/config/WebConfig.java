@@ -1,4 +1,4 @@
-/*
+
 package com.example.tomorrow_letter.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -17,4 +17,4 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowCredentials(true)
                 .allowedOrigins("http://"+this.ipAddress+":"+this.frontEndPort);
     }
-}*/
+}

@@ -53,9 +53,9 @@ public class SmsService {
                 messageToSend.setType(MessageType.valueOf("SMS"));
                 messageToSend.setText(letter.getReceivePhone()+"에게 메시지를 보냈습니다.");
 
-                //List<Message> messagesSend = new ArrayList<>();
-                //messagesSend.add(messageToSend);
-                //messageService.send(messagesSend); // List<Message> 형태로 전송
+                List<Message> messagesSend = new ArrayList<>();
+                messagesSend.add(messageToSend);
+                messageService.send(messagesSend); // List<Message> 형태로 전송
             }
         } catch (NurigoMessageNotReceivedException exception) {
             // 발송에 실패한 메시지 목록을 확인할 수 있습니다!
