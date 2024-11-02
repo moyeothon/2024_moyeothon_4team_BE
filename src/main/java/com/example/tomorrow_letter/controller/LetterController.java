@@ -2,12 +2,9 @@ package com.example.tomorrow_letter.controller;
 
 
 import com.example.tomorrow_letter.dto.*;
-import com.example.tomorrow_letter.repository.LetterRepository;
 import com.example.tomorrow_letter.service.LetterService;
-import com.example.tomorrow_letter.service.SmsSchedulerService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
