@@ -1,0 +1,12 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+kakao:
+  client_id: fda9a7290a1a229729a294339a7badf0
+  redirect_uri: http://localhost:8080/oauth/kakao/callback
+
+jwt:
+  secret: f0b126fb6b1363dc22dcdb37a4d1048cd8daae05afdc79b2c08c04d559bcfa051a0198e1e301b8b0ada362c5bac37944ef80c2f1f66004e7f994443c07b17fea
+  access-token-validity-in-milliseconds: 3600000
